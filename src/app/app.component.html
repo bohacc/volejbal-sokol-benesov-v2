@@ -1,20 +1,1449 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="#" class="brand logo">
+        <!-- This is website logo -->
+        <img src="/assets/img/znak.png" width="37" height="43" alt="TJ Sokol Benešov" />
+      </a>
+      <h2 class="logo">TJ Sokol Benešov u Prahy</h2>
+      <!-- Navigation button, visible on small resolution -->
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <i class="icon-menu"></i>
+      </button>
+      <!-- Main navigation -->
+      <div class="nav-collapse collapse pull-right">
+        <ul class="nav" id="top-navigation">
+          <!--<li><a href="#">Úvod</a></li>-->
+          <li><a href="#about">O nás</a></li>
+          <li><a href="#players">Hráči</a></li>
+          <li><a href="#news">Aktuality</a></li>
+          <li><a target="_blank" href="http://www.cvf.cz/rozpisy-vysledky/?soutez=ST-M1&skupina=ST-M-1">Zápasy</a></li>
+          <li><a target="_blank" href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1">Tabulka</a></li>
+          <li><a target="_blank" href="https://www.facebook.com/pg/volejbalbenesov/photos/">Fotky</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="#partners">Partneři</a></li>
+        </ul>
+      </div>
+      <!-- End main navigation -->
+    </div>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- Start home section -->
+<div id="home">
 
+  <!--for server side-->
+  <div class="da-slider slider-height" *ngIf="isServer">
+    <div class="triangle"></div>
+    <!-- mask elemet use for masking background image -->
+    <div class="mask"></div>
+    <!-- All slides centred in container element -->
+    <div class="container">
+      <!-- Start first slide -->
+      <div class="da-slide da-slide-current">
+        <h2 class="fittext2">Aktualita</h2>
+        <h4>20.10.2018</h4>
+        <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů.</p>
+        <a href="#news" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/dobris.jpg" alt="Soutěž" width="320">
+        </div>
+      </div>
+
+      <div class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start cSlider -->
+  <div id="da-slider" class="da-slider slider-height" cslider [ngClass]="{hide: isServer}">
+    <div class="triangle"></div>
+    <!-- mask elemet use for masking background image -->
+    <div class="mask"></div>
+    <!-- All slides centred in container element -->
+    <div class="container">
+      <!-- Start first slide -->
+      <div class="da-slide">
+        <h2>Aktualita</h2>
+        <h4>20.10.2018</h4>
+        <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů</p>
+        <a href="#news" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/dobris.jpg" width="520" alt="Aktualita">
+        </div>
+      </div>
+      <!-- End first slide -->
+      <!-- Start second slide -->
+      <div class="da-slide">
+        <h2 class="fittext2">Aktuálně hrajeme</h2>
+        <h4>KP I. TŘÍDY MUŽŮ</h4>
+        <p>V sezóně 2018/2019 hrajeme soutěž ST-M1. Naším cílem v této sezóně je podat stabilnější výsledky než v minulé a vyhrát soutěž.</p>
+        <a href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/header11x.png" alt="Soutěž" width="320">
+        </div>
+      </div>
+      <!-- End second slide -->
+      <!-- Start third slide -->
+      <div class="da-slide">
+        <h2>Naši hráči</h2>
+        <h4>Přidej se k nám</h4>
+        <p>Jsme ambiciózní tým lidí, které volejbal skutečně baví a chtějí podávat ty nejlepší výkony, ale také dobrá parta, která ráda zajde na pivo. Pokud máš chuť se k nám přidat tak neváhej a přijď se podívat na trénink</p>
+        <a href="#players" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/header22x.png" width="520" alt="hráči">
+        </div>
+      </div>
+      <!-- Start third slide -->
+      <!-- Start cSlide navigation arrows -->
+      <div class="da-arrows">
+        <span class="da-arrows-prev"></span>
+        <span class="da-arrows-next"></span>
+      </div>
+      <!-- End cSlide navigation arrows -->
+    </div>
+  </div>
+</div>
+<!-- End home section -->
+
+
+
+<!-- Service section start -->
+<div class="section primary-section" id="service">
+  <div class="container">
+    <!-- Start title section -->
+    <div class="title">
+      <h1>Vítejte na stránkách volejbalového klubu TJ Sokol Benešov u Prahy</h1>
+      <!-- Section's title goes here -->
+      <p>Najdete zde kompletní informace o našem týmu, zápasech, tréninku a další.</p>
+      <!--Simple description for section goes here. -->
+    </div>
+    <div class="row-fluid">
+      <div class="span4">
+        <div class="centered service">
+          <div class="circle-border zoom-in">
+            <img class="img-circle" src="/assets/img/ico/cup.png" alt="Soutěž">
+          </div>
+          <h3>Soutěž</h3>
+          <p>V sezóně 2018/2019 hrajeme soutěž ST-M1.</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="centered service">
+          <div class="circle-border zoom-in">
+            <img class="img-circle" src="/assets/img/ico/spider.png" alt="Kde hrajeme"/>
+          </div>
+          <h3>Kde hrajeme</h3>
+          <p>Sportovní hala ZŠ Jiráskova, Jiráskova 888, Benešov, (pondělí Sokolovna, Tyršova 438)</p>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="centered service">
+          <div class="circle-border zoom-in">
+            <img class="img-circle" src="/assets/img/ico/ball.png" alt="Tréninky">
+          </div>
+          <h3>Tréninky</h3>
+          <p>Každé pondělí od 19:30-21:30 a středu od 20:00-22:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Service section end -->
+
+<div class="section secondary-section">
+  <div class="triangle"></div>
+  <div class="container centered">
+    <p class="large-text">Můžeš mít buď výsledky nebo výmluvy. Nemůžeš mít obojí.</p>
+    <small>Arnold Schwarzenegger</small>
+    <a href="#" class="button">Na úvod</a>
+  </div>
+</div>
+
+<!-- About us section start -->
+<div class="section primary-section" id="players">
+  <div class="triangle"></div>
+  <div class="container">
+    <div class="title">
+      <h1>Naši hráči</h1>
+      <p>Představujeme Vám naše aktivní hráče, kteří jsou pro sezónu 2018/2019 na soupisce.</p>
+    </div>
+    <div class="row-fluid team">
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/bartusekjan.png" alt="Bartůšek Jan">
+          <h3>Bartůšek Jan</h3>
+          <h5>Smečař</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/jan.bartusek.1" target="_blank">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Smečař</h2>
+            <p>Ročník 1993</p>
+            <p>Dosah: 310 cm</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/bartusekj.png" alt="Bartůšek Josef">
+          <h3>Bartůšek Josef</h3>
+          <h5>Smečař, univerzál</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/pepa.bartusek.5" target="_blank">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Smečař, univerzál</h2>
+            <p>Ročník 1987</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/bohac.png" alt="Boháč Martin">
+          <h3>Boháč Martin</h3>
+          <h5>Smečař</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=1177376910">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Smečař</h2>
+            <p>Ročník 1981</p>
+            <p>Výška: 189 cm</p>
+            <p>Váha: 89 kg</p>
+            <p>Dosah: 315 cm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid team">
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/hlavnicka.png" alt="Hlavnička Jiří">
+          <h3>Hlavnička Jiří</h3>
+          <h5>Nahrávač</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/jiri.hlavnicka.9">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Nahrávač</h2>
+            <p>Ročník 1982</p>
+            <p>Dosah: 300 cm</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/martin-janak.jpg" alt="Janák Martin">
+          <h3>Janák Martin</h3>
+          <h5>Libero</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/martin.janak.12">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Libero</h2>
+            <p>Ročník 1985</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/koci.png" alt="Kočí Petr">
+          <h3>Kočí Petr</h3>
+          <h5>Blokař, trenér</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/petr.koci.75">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Blokař</h2>
+            <p>Ročník 1981</p>
+            <p>Dosah: 310 cm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid team">
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/kunc.png" alt="Kunc Martin">
+          <h3>Kunc Martin</h3>
+          <h5>Univerzál, blokař, libero</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/kivik">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Univerzál, blokař, libero</h2>
+            <p>Ročník 1981</p>
+            <p>Výška: 189 cm</p>
+            <p>Váha: 82 kg</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/kyselka.png" alt="Kyselka Jan">
+          <h3>Kyselka Jan</h3>
+          <h5>Blokař</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/jan.kyselka.39">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Blokař</h2>
+            <p>Ročník 1985</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/lang.png" alt="Lang Michal">
+          <h3>Lang Michal</h3>
+          <h5>Smečař, libero, univerzál</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/michal.lang.18">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Smečař, libero, univerzál</h2>
+            <p>Ročník 1984</p>
+            <p>Dosah: 315 cm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid team">
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/rehak.png" alt="Řehák Petr">
+          <h3>Řehák Petr</h3>
+          <h5>Smečař</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100007576965329">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Smečař</h2>
+            <p>Ročník 1974</p>
+            <p>Výška: 190 cm</p>
+            <p>Váha: 93 kg</p>
+            <p>Dosah: 330 cm</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/votruba.png" alt="Votruba Viktor">
+          <h3>Votruba Viktor</h3>
+          <h5>Blokař, asistent trenéra</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/viktor.votruba.5">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Blokař, asistent trenéra</h2>
+            <p>Ročník 1977.</p>
+          </div>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/no-person.png" alt="Janák Michal">
+          <h3>Janák Michal</h3>
+          <h5>Nahrávač</h5>
+          <ul class="social">
+            <li>
+              <a href="https://www.facebook.com/michal.janak.96">
+                <span class="icon-facebook-circled"></span>
+              </a>
+            </li>
+          </ul>
+          <div class="mask">
+            <h2>Nahrávač</h2>
+            <p>Ročník 1989</p>
+            <p>Výška: xx cm</p>
+            <p>Váha: xx kg</p>
+            <p>Dosah: xx cm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="title">
+      <h1>Funkcionáři</h1>
+    </div>
+    <div class="row-fluid team">
+      <div class="span4">
+        <div class="thumbnail">
+          <img src="/assets/img/players/jiracek.png" alt="Jiráček Viktor">
+          <h3>Jiráček Viktor</h3>
+          <h5>Čestný vedoucí oddílu</h5>
+          <div class="mask">
+            <h2>Čestný vedoucí oddílu</h2>
+            <p>Ročník 1932</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section secondary-section">
+  <div class="triangle"></div>
+  <div class="container centered">
+    <p class="large-text">Tajemství úspěchu člověka spočívá ve zvyku dělat to, co neúspěšní lidé dělají neradi.</p>
+    <small>Jackson King</small>
+    <a href="#" class="button">Na úvod</a>
+  </div>
+</div>
+
+<div id="about">
+  <div class="section primary-section">
+    <div class="triangle"></div>
+    <div class="container">
+      <div class="title">
+        <h1>O nás</h1>
+        <p>Jsme ambiciózní tým lidí, které volejbal skutečně baví a chtějí podávat ty nejlepší výkony, ale také dobrá
+          parta, která ráda zajde na pivo. Pokud máš chuť se k nám přidat tak neváhej a přijď se podívat na trénink.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About us section end -->
+<div class="section secondary-section">
+  <div class="triangle"></div>
+  <div class="container centered">
+    <p class="large-text">Překážky jsou ony obávané věci, které spatříte, když odvrátíte pohled od svého cíle.</p>
+    <small>Henry Ford</small>
+    <a href="#" class="button">Na úvod</a>
+  </div>
+</div>
+<!-- Client section start -->
+<div id="news">
+  <div class="section primary-section">
+    <div class="triangle"></div>
+    <div class="container">
+      <div class="title">
+        <h1>Aktuality</h1>
+        <p>Články o našem volejbale můžete také najít na stránkách <a href="http://benesovsky.denik.cz/">Benešovského
+          deníku</a> v rubrice
+          <a href="http://benesovsky.denik.cz/ostatni_region/">sport</a>.
+        </p>
+      </div>
+      <div class="row">
+        Aktuální sezóna 2018 / 2019
+      </div>
+      <div class="row">
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
+              <small>20.10.2018</small>
+              <strong>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů.</strong>
+            </div>
+            <p>V sobotu 20.10.2018 sehrál TJ Sokol Benešov další dvojutkání  v rámci krajského přeboru ve volejbale mužů.</p>
+            <p *ngIf="news[29]">
+              Tentokrát benešovský tým zavítal na palubovku Dobřichovic, a to ve značně pozměněné sestavě oproti předchozím utkáním.
+              Na začátku prvního zápasu byla tato změna patrná v souhře celého týmu. Hosté se dopouštěli řady nepřesností, které však kompenzovali bojovným výkonem. Díky vysokému hernímu nasazení  a větší chuti po vítězství, benešovští volejbalisté v koncovce každého setu soupeře přehráli a zaslouženě tak zvítězili ve všech třech setech.
+              Do druhého utkání nastoupili volejbalisté Dobřichovic se změnou na většině postů a výrazně zlepšili svůj herní projev. Hráči Benešova na oplátku přidali k bojovnému nasazení i značně zlepšenou souhru, a tak bylo utkání velmi vyrovnané. První set vyhráli hosté nejtěsnějším rozdílem. V druhém setu díky týmovému výkonu a obrovskému nasazení, dokázali benešovští volejbalisté v rozhodující chvíli vymazat devítibodovou ztrátu a dotáhnout sadu do vítězného konce. Ve třetím setu Dobřichovičtí vyhráli a zápas tak na chvilku zdramatizovali. Čtvrtý set opět ovládli hráči Benešova a připsali si tak šesté vítězství v této sezóně.
+              TJ Sokol Benešov s plným bodovým ziskem vede tabulku krajského přeboru.
+              Příští dvojzápas sehrají volejbalisté na domácí palubovce proti TJ Slavoj Český Brod v sobotu 10. 11. 2018 od 11:00 a 15:00 hod.
+              3. kolo:  TJ Sokol Dobřichovice B - TJ Sokol Benešov 0:3 (-22, -22, -19) , 1:3 (-24, -24, 23, -21)
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, Ja. Bartůšek, J. Kyselka, Ma. Janák. M. Lang, J. Hlavnička, M. Kunc
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(29)" *ngIf="!news[29]">celá zpráva...</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
+              <small>13.10.2018</small>
+              <strong>Benešovští volejbalisté porazili na domácí palubovce Zruč.</strong>
+            </div>
+            <p>V sobotu 13.10. pokračovala nová sezóna krajského přeboru ve volejbale mužů. TJ Sokol Benešov sehrál dvojutkání na domácí palubovce s týmem TJ Jiskra Zruč nad Sázavou.</p>
+            <p *ngIf="news[28]">
+              První utkání zahájili domácí velmi špatným výkonem a první set si zaslouženě připsali hosté. Již na konci prvního setu došlo v domácím týmu ke střídání a od druhého setu hráči Benešova zlepšili všechny herní činnosti. Další tři sety prvního utkání již byly v režii benešovských volejbalistů a v zápase zvítězili.
+
+              Ve druhém utkání domácí opět ztratili jeden set a tento zápas byl také více vyrovnaný včetně dramatické zápletky na konci čtvrtého setu. Hráči hostí předváděli v celém zápase velmi vysoké herní nasazení, zejména v obraně v poli. Nicméně domácí byli i tentokrát šťastnějším týmem a připsali si další vítězství.
+
+              Příští dvojzápas sehraje tým z Benešova na palubovce Dobřichovic v sobotu 20.10.2018 od 10:00 a 14:00 hod.
+
+              2. kolo, TJ Sokol Benešov - TJ Jiskra Zruč nad Sázavou, 3:1 (-17, 23, 22, 11) , 3:1 (23, -21, 18, 24)
+
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, M. Boháč, Ja. Bartůšek, J. Kyselka, P. Řehák, V. Votruba,  Mi. Janák, Ma. Janák, M. Lang
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(28)" *ngIf="!news[28]">celá zpráva...</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
+              <small>6.10.2018</small>
+              <strong>Novou sezónu zahájili benešovští volejbalisté v tradičním derby s Vlašimí vítězně.</strong>
+            </div>
+            <p>V sobotu 6.10. začala prvním kolem nová sezóna krajského přeboru ve volejbale mužů.
+
+              TJ Sokol Benešov zajížděl hned na úvod na palubovku tradičního rivala TJ Sokol Vlašim. </p>
+            <p *ngIf="news[27]">
+              Již od úvodu prvního zápasu byla poznat atmosféra derby a na obou stranách hřiště se objevovaly četné nepřesnosti ve všech herních činnostech. Navíc se benešovským volejbalistům nepodařilo zvládnout vyrovnanou koncovku prvního setu. V dalších třech setech už však měli hosté mírnou převahu a celý první zápas tak dotáhli do vítězného konce. Druhý zápas byl s výjimkou druhého setu také v režii benešovských volejbalistů.
+
+              I přes ztrátu dvou setů bylo zřejmé, že výrazný výkonnostní rozdíl mezi tradičními soupeři pokračuje i v další sezóně, a to i přes významnou personální obměnu týmu Vlašimi.
+
+              Také benešovský tým pro novou sezónu doplnil kádr, což umožní lépe rozložit síly pro celou sezónu a také kompenzovat případné výpadky a zranění, které výrazně poznamenali výsledky v předchozích dvou letech.
+
+              Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti TJ Jiskra Zruč nad Sázavou v sobotu 13.10.2018 od 11:00 a 15:00 hod.
+
+              1. kolo, TJ Sokol Vlašim - TJ Sokol Benešov, 1:3 (28, -12, -14, -16) , 1:3 (-19, 23, -20, -17)
+
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, Ja. Bartůšek, J. Kyselka, P. Řehák, V. Votruba,  Ma. Janák, M. Lang, Mi. Janák, V. Dachauer
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(27)" *ngIf="!news[27]">celá zpráva...</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
+              <small>21.9.2018</small>
+              <strong>Příprava na novou sezónu je v plném proudu.</strong>
+            </div>
+            <p>Tým začal tréninkem již v polovině srpna. První zápas ho čeká 6.10. s Vlašimským mužstvem.</p>
+            <p *ngIf="news[26]">
+              Jako novinka pro letošní sezónu je nový nahrávač Michal Janák, který na sobě letos už hodně zapracoval a bude velkou posilou týmu.
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(26)" *ngIf="!news[26]">celá zpráva...</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <a href="javascript:void(0)" (click)="toggleSeason(seasonsEnum.SEASON2017_2018)">Sezóna 2017 / 2018</a>
+      </div>
+      <div *ngIf="season2017_2018">
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>24.2.2018</small>
+                <strong>Benešovští volejbalisté získali plný počet bodů v zápase s Dobříší a vedou tabulku</strong>
+              </div>
+              <p>V sobotu 25.2. pokračoval patnáctým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov přivítal
+                na domácí palubovce VK Dobříš, loňského účastníka národní ligy a aktuálně pátý celek průběžného
+                hodnocení soutěže.</p>
+              <p *ngIf="news[25]">
+                Oba zápasy byly plně v režii domácího týmu, který předvedl koncentrovaný a takticky kvalitní výkon a
+                nedovolil soupeři průběh hry výrazněji zdramatizovat. Obě utkání benešovští odehráli s velkým
+                individuálním nasazením, pestrou hrou v útoku a kvalitní obranou hlavně na síti.
+
+                Po patnácti odehraných kolech soutěže vedou benešovští volejbalisté průběžnou tabulku soutěže o tři body
+                před druhým Kladnem.
+
+                Příští dvojzápas sehraje TJ Sokol Benešov na palubovce Kladna, které pravděpodobně bude mít ve svém
+                kádru hráče nastupující v nejvyšší soutěži. Obě utkání se hrají ve středu 7.3.2018 od 18:30 hod a budou
+                bezpochyby přímým a atraktivním soubojem o první místo v tabulce. Tato dvě utkání také výrazně určí,
+                který tým se zúčastní kvalifikace o postup do druhé národní ligy pro příští sezónu.
+
+                15. kolo, TJ Sokol Benešov - VK Dobříš A, 3:0 (21, 19, 15) , 3:0 (22, 23, 18)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, J. Kyselka, P. Řehák, M. Janák,
+                M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(25)" *ngIf="!news[25]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>17.2.2018</small>
+                <strong>Tuchlovice - Benešov</strong>
+              </div>
+              <p>Ve čtrnáctém kole zajeli hráči Benešova změřit síly s tradičním rivalem z Tuchlovic.</p>
+              <p *ngIf="news[24]">
+                Jak je to již u tohoto soupeře zvykem, utkání bylo plné zvratů a překvapení.
+
+                Volejbalisté Benešova nezačali příliš slibně, již od začátku zaostávali především v obranné činnosti a
+                na příjmu.
+
+                Ostrý servis protivníka situaci ještě zhoršoval a první set byl ztracen. Kdo si ovšem myslel, že podobný
+                průběh bude mít celý zápas, spletl se.
+
+                Naši hráči se ze ztráty setu rychle vzpamatovali, zlepšili příjem a následující set byl pro změnu zcela
+                v jejich režii.
+
+                Třetí set se odvíjel jako na houpačce ale soustředěnou hrou se podařilo náskok vždy obrátit a nakonec
+                přesvědčivě vyhrát. Podobně se odvíjel i poslední set.
+
+                V druhém zápase po prvním a druhém setu, ve kterém jasně dominovali Benešovští volejbalisté se pro změnu
+                nadechli hráči Tuchlovic.
+
+                I přes plné nasazení v dramatických koncovkách a taktické střídání se nepodařilo odvrátit zkrácenou hru.
+                V této zkrácené hře díky odhodlání hráčů,
+
+                čerstvě posile v podobě trenéra a taktice Benešov vítězí a odváží si tak domů dobrý pocit ze hry a pět
+                bodů do průběžné tabulky.
+
+                V příštím utkání v sobotu 24. února si celek Benešova změří síly s volejbalisty z Dobříše.
+
+                Domácí utkání začíná v 11 hodin ve sportovní hale ZŠ Jiráskova.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(24)" *ngIf="!news[24]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>10.2.2018</small>
+                <strong>Atraktivní zápasy dvou mužstev z čelních míst</strong>
+              </div>
+              <p>Třinácté kole jarní sezóny nabídlo příznivcům volejbalu v Benešově atraktivní zápasy dvou mužstev z
+                čelních míst průběžné tabulky.</p>
+              <p *ngIf="news[23]">
+                Na domácí půdě se utkali volejbalisté Benešova s týmem TJ Sokol Roztoky u Prahy, který je aktuálně na
+                čtvrté pozici v průběžném pořadí.
+
+                Utkání začalo velmi slibně, hráči Benešova již od začátku udávali tempo hry, a tak hladce zvítězili v
+                prvních dvou setech.
+
+                Bohužel v dalším setu se hráčům Benešova moc nedařilo v obranné činnosti a hromadily se také nevynucené
+                chyby na útoku.
+
+                I přes houževnatý odpor a poměrně dramatickou koncovku se ztrátě setu nepodařil zabránit. Čtvrtý set již
+                patřil opět Benešovu.
+
+                Podobný průběh měl i druhý zápas. Domácí pevnost tak zůstává v jarní sezóně nedobyta a volejbalisté
+                Benešova si připisují plných šest bodů do průběžné tabulky.
+
+                V příštím utkání v sobotu 17. února si celek Benešova změří síly s tuchlovickými volejbalisty. Utkání
+                začíná v 11 hodin v tělocvičně VK Tuchlovice.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(23)" *ngIf="!news[23]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>20.1.2018</small>
+                <strong>Soupeře slupnuli jako maliny</strong>
+              </div>
+              <p>Ve dvanáctém kole krajského volejbalového přeboru zajížděl ke dvojzápasu druhý Benešov na palubovku
+                předposledního Českého Brodu, kde se od něj čekal plný počet bodů, a to se také stalo.</p>
+              <p *ngIf="news[22]">
+                Benešov nastoupil bez hlavních opor, přesto podal kvalitní, týmový, disciplinovaný výkon, jenž zlomil
+                odpor houževnatého soupeře. V každém setu byla hra vyrovnaná do poloviny. Ve druhých částech byli hosté
+                přesnější a dotáhli sety do vítězných konců.
+
+                Hosté zúročili cvičení z tréninků. Celkem dobře blokovali, kombinovali, dařila se jim hra středem i v
+                poli. Při delších výměnách měli více štěstí i díky tomu, že jsou v psychické pohodě. Domácí byli
+                houževnatí, ale dost chybovali.
+
+                Michal Lang byl sice na palubovce nejsilnější, ale zároveň nejlepším hráčem.
+
+                Osmá Vlašim zvládla zápas s desátým (posledním) Kolínem, který jasně v obou zápasech přehrála a získala
+                plný počet bodů.
+
+                Český Brod – Benešov 0:3 a 0:3.
+
+                Benešov: Josef Bartůšek, Martin Boháč, Petr Kočí, Jan Kyselka, Michal Lang, Martin Janák, Jiří
+                Hlavnička.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(22)" *ngIf="!news[22]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>20.1.2018</small>
+                <strong>Vlašim potrápila v derby Benešov</strong>
+              </div>
+              <p>Vlašim – V jedenáctém kole krajského volejbalového přeboru se odehrálo derby mezi Vlašimí (osmá) a
+                Benešovem (druhý). Tradičně atmosférou nabitý zápas se z důvodu obsazené domácí haly výjimečně odehrál
+                na palubovce Vlašimi, ve které tak domácími byli Benešáci, jenž si nakonec připsali pět bodů, Vlašim
+                jeden.</p>
+              <p *ngIf="news[21]">
+                Utkání pro hráče od Konopiště začalo velmi slibně a první set byl zcela v jejich režii. Poté ale začali
+                kupit nevynucené chyby a nepřesnosti, zejména při hře v poli, které umožnily Vlašimi získat zpět
+                ztracené sebevědomí a výhru v následujících dvou setech. Ve čtvrtém setu ale favorizovaní benešovští
+                volejbalisté dokázali tlak hráčů zpod Blaníka v kritickém okamžiku zastavit a zápas dovést do zkrácené
+                hry, kde se štěstí definitivně přiklonilo na jejich stranu.
+
+                Utkání pro hráče od Konopiště začalo velmi slibně a první set byl zcela v jejich režii. Poté ale začali
+                kupit nevynucené chyby a nepřesnosti, zejména při hře v poli, které umožnily Vlašimi získat zpět
+                ztracené sebevědomí a výhru v následujících dvou setech. Ve čtvrtém setu ale favorizovaní benešovští
+                volejbalisté dokázali tlak hráčů zpod Blaníka v kritickém okamžiku zastavit a zápas dovést do zkrácené
+                hry, kde se štěstí definitivně přiklonilo na jejich stranu.
+
+                Ve druhém zápase již byl herní projev hráčů Benešova zcela dominantní. Výrazné zlepšení všech herních
+                činností a především kvalitní obrana, nedávaly vlašimským hráčům příliš prostoru pro zvrat či vážnější
+                ohrožení. Zápas byl tak ukončen již po třech setech.
+
+                Benešov: Jo. Bartůšek, Kočí, Hlavnička, Boháč, Ja. Bartůšek, Janák, Kyselka, Řehák, Votruba, Lang.
+
+                Vlašim: Hlaváček, Jurásek, Kalina, Klusák, Mach, Oyuntsetseg, O. Teska, T. Teska, Vaněk, Zeman.
+
+                V sobotu 27. ledna hraje Benešov s Českým Brodem v Liblicích a Vlašim přivítá od 10 hodin Kolín.
+                Benešov – Vlašim 3:2 (14, -22, -23, 12, 13 ), 3:0 (20, 14, 15)
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(21)" *ngIf="!news[21]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>13.1.2018</small>
+                <strong>I přes zdravotní problémy dovezli domů plný počet bodů</strong>
+              </div>
+              <p>Zruč nad Sázavou – V prvním kole jarní sezóny (celkově desátém) krajského volejbalového přeboru
+                zajížděli volejbalisté Benešova do Zruče nad Sázavou, kde se jim dařilo, když si připsali plný počet
+                bodů. Aktuálně jsou na druhém místě tabulky se ziskem 49 bodů.</p>
+              <p *ngIf="news[20]">
+                Herní projev týmu byl částečně poznamenán delší pauzou i přetrvávajícími zdravotními problémy hráčů.
+                Přesto volejbalisté Benešova v obou zápasech plných zajímavých a napínavých momentů s jistotou přehráli
+                svoji bojovností houževnatého soupeře.
+
+                Během zápasů se dostali do hry všichni hráči z benešovského kádru a prokázali tak stabilitu týmu.
+                Jediným problémem tak zůstává větší počet zdravotně indisponovaných hráčů.
+
+                Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, M. Janák, J. Kyselka, P. Řehák, V.
+                Votruba, M. Lang.
+
+                V sobotu 20. ledna zajíždí Benešov k derby do Vlašimi, která je aktuálně osmá. Zápasy jistě nabídnou
+                napínavou atmosféru, jak je již u derby zvykem. Utkání začíná v deset hodin, mimořádně v tělocvičně TJ
+                Sokol Vlašim.
+                Zruč nad Sázavou – Benešov 1:3 (-22, -12, 23, -24), 0:3 (-22, -15, -21)
+                VIKTOR VOTRUBA
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(20)" *ngIf="!news[20]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>9.12.2017</small>
+                <strong>Benešovští volejbalisté přivezli cenné body z Dobřichovic</strong>
+              </div>
+              <p>V sobotu 9.12. pokračoval devátým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov sehrál další
+                dvojutkání na palubovce TJ Sokol Dobřichovice B.</p>
+              <p *ngIf="news[19]">
+                Poslední kolo podzimní části soutěže nezastihlo benešovský tým v optimální formě a výkon v obou utkáních
+                byl značně poznamenán také početnou marodkou. Přesto se podařilo tradičně houževnatý tým z Dobřichovic v
+                jeho domácím prostředí přehrát. Ve srovnání s výkony z předchozích utkání měl však herní projev
+                benešovských značné rezervy ve všech činnostech částečně kompenzované bojovností.
+
+                Po devíti odehraných kolech soutěže se benešovští volejbalisté drží na předních místech v průběžné
+                tabulce soutěže s minimálním bodovým odstupem na první místo.
+
+                V průběhu vánoční přestávky se benešovští volejbalisté zaměří především na regeneraci, doléčení zranění
+                a fyzickou kondici.
+
+                Příští víkend se část benešovského týmu zúčastní tradičního volejbalového turnaje „Open“ ve Vlašimi. V
+                sobotu 16.12.2017 se také uskuteční setkání současných a bývalých benešovských volejbalistů a
+                volejbalistek, a to jak na hřišti, tak v rámci společenského večera. V prvním víkendu v roce 2018
+                benešovský tým plánuje účast na přípravném turnaji v Kolíně.
+
+                K prvnímu utkání jarní části soutěže zajíždí tým z Benešova v sobotu 13.1.2018 do Zruče nad Sázavou,
+                zápasy se hrají od 11 a 15 hod.
+
+                9. kolo, TJ Sokol Dobřichovice B - TJ Sokol Benešov, 1:3 (-21,-20,23,-19), 2:3 (22,-17,25,-20,-7)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(19)" *ngIf="!news[19]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>2.12.2017</small>
+                <strong>Benešovští volejbalisté hladce zdolali poslední tým tabulky z Kolína.</strong>
+              </div>
+              <p>V sobotu 2.12. pokračoval osmým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov sehrál další
+                dvojutkání na domácí palubovce s posledním týmem tabulky SK Volejbal Kolín A.</p>
+              <p *ngIf="news[18]">
+                Oba zápasy byly plně v režii domácího týmu, nicméně úroveň předvedené hry odpovídala konfrontaci týmů z
+                opačných konců tabulky. Přesto bylo možné vidět některé zajímavé výměny a herní kombinace. V průběhu
+                obou utkání se na straně benešovského týmu do hry zapojili všichni hráči.
+
+                SK Volejbal Kolín má v sestavě převážně velmi mladé hráče, kteří zároveň nastupují v juniorských
+                kategoriích, včetně reprezentačních výběrů. Přímá konfrontace se seniorským volejbalem určitě přispěje k
+                jejich herní výkonnosti v budoucnu.
+
+                Po osmi odehraných kolech soutěže drží benešovští volejbalisté druhé místo v průběžné tabulce soutěže a
+                ztrácí pouze jeden bod na vedoucí Kladno.
+
+                Podzimní část soutěže zakončí tým z Benešova na palubovce TJ Sokol Dobřichovice v sobotu 09.11.2017 od
+                10:00 hod a 14:00 hod.
+
+                8. kolo, TJ Sokol Benešov – SK Volejbal Kolín A, 3:0 (18, 17, 17) , 3:0 (22, 15, 20)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Janák, M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(18)" *ngIf="!news[18]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>25.11.2017</small>
+                <strong>Benešovští volejbalisté podlehli soupeři z Kladna na domácí půdě.</strong>
+              </div>
+              <p>V sobotu 25.11. pokračoval sedmým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov hostil celek
+                z volejbalového klubu Kladna. Mladý tým nováčka v této soutěži je doplněn několika hráči z extraligy a
+                aspiruje na přední příčky tabulky. Utkání tak předem slibovalo dramatickou podívanou.</p>
+              <p *ngIf="news[17]">
+                Přes úvodní zaváhání domácích byly v obou zápasech k vidění zajímavé volejbalové momenty. Zejména v
+                druhém zápase si domácí volejbalisté vytvořili solidní bodový náskok důraznou hrou na bloku i v útoku, a
+                tak přinutili soupeře k většímu množství chyb. Bohužel výkon benešovských hráčů byl silně poznamenán
+                nervozitou, a tak v klíčových momentech nedokázali tento náskok udržet. Hostující tým si tak odvezl z
+                Benešova plných šest bodů.
+
+                Po sedmi odehraných kolech soutěže se benešovští umístili na třetím místě průběžné tabulky soutěže.
+                Příští dvojzápas sehraje TJ Sokol Benešov opět na domácí palubovce proti celku SK Kolín A. Obě utkání se
+                hrají v sobotu 2.12.2017 od 11:00 a 15:00 hod ve sportovní hale ZŠ Jiráskova.
+
+                7. kolo, TJ Sokol Benešov – VK Kladno, 0:3 (-15, -20, -19) , 1:3 (-23, -20, 20,-18) Sestava TJ Sokol
+                Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, J. Kyselka, P. Řehák, V. Votruba, M. Janák, M.
+                Lang
+
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(17)" *ngIf="!news[17]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>18.11.2017</small>
+                <strong>Benešovští volejbalisté přivezli cenné body z Dobříše.</strong>
+              </div>
+              <p>V sobotu 18.11. pokračoval šestým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov zajížděl na
+                palubovku VK Dobříš, loňského účastníka národní ligy a aktuálně druhého celku průběžného hodnocení
+                soutěže. </p>
+              <p *ngIf="news[16]">
+                Oba zápasy byly plně v režii hostujícího týmu, který předvedl koncentrovaný a takticky kvalitní výkon a
+                nedovolil soupeři průběh hry výrazněji zdramatizovat. Obě utkání benešovští odehráli s velkým
+                individuálním nasazením, pestrou hrou v útoku a kvalitní obranou hlavně na síti.
+
+                Po šesti odehraných kolech soutěže vedou benešovští volejbalisté průběžnou tabulku soutěže, kdy zatím
+                ztratili pouze jeden zápas.
+
+                Příští dvojzápas sehraje TJ Sokol Benešov na domácí palubovce s týmem Kladna, který pravděpodobně bude
+                mít ve svém kádru hráče nastupující také v nejvyšší soutěži. Obě utkání se hrají v sobotu 25.11.2017 od
+                11:00 a 15:00 hod. ve sportovní hale ZŠ Jiráskova a bezpochyby budou další přímou konfrontací s týmem
+                aspirujícím na přední příčky tabulky.
+
+                6. kolo, VK Dobříš A - TJ Sokol Benešov, 0:3 (-12, -17, -16) , 0:3 (-20, -16, -22)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Janák, M. Lang
+
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(16)" *ngIf="!news[16]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>11.11.2017</small>
+                <strong>Benešovští volejbalisté drží průběžné první místo v tabulce.</strong>
+              </div>
+              <p>V sobotu 11.11. pokračoval pátým kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov sehrál další
+                dvojutkání na domácí palubovce s tradičně silným soupeřem VK Tuchlovice A, tentokrát netradičně ve
+                večerních hodinách. </p>
+              <p *ngIf="news[15]">
+                Oba zápasy byly plně v režii domácího týmu a i přes drobná zaváhání zejména v úvodu některých setů
+                nedostal hostující tým mnoho příležitostí průběh hry výrazněji zdramatizovat. Ve všech setech domácí
+                volejbalisté předvedli koncentrovaný výkon a vyvarovali se také většího počtu nevynucených chyb.
+                Výjimkou byl druhý set druhého zápasu, kdy benešovský tým i přes slibně rozehranou koncovku nedokázal
+                ani přes několik pokusů úspěšně zaútočit a zakončit tak tento set vítězně. Obě utkání domácí odehráli v
+                základní sestavě, pouze s jedním krátkým střídáním. Benešovský tým i nadále trápí početná marodka.
+
+                Po pěti odehraných kolech soutěže vedou benešovští volejbalisté průběžnou tabulku soutěže. Utkání
+                s týmem z Tuchlovic bylo také první letošní konfrontací s týmem s nejvyššími ambicemi. V dalších dvou
+                kolech sehrají benešovští volejbalisté velmi důležitá utkání s týmem z Dobříše, loňským účastníkem
+                národní ligy a také s rezervním týmem extraligového Kladna, který má sestavu nabitou hráči z nejvyšší
+                soutěže.
+
+                Příští dvojzápas sehraje tým z Benešova na palubovce týmu z Dobříše v sobotu 18.11.2017 od 10:00 hod.
+
+                5. kolo, TJ Sokol Benešov – VK Tuchlovice A, 3:0 (22, 13, 15) , 3:1 (15, -19, 18, 19)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Janák, M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(15)" *ngIf="!news[15]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>4.11.2017</small>
+                <strong>V sobotu 4.11. pokračoval čtvrtým kolem krajský přebor ve volejbale mužů.</strong>
+              </div>
+              <p>TJ Sokol Benešov zajížděl na další dvojutkání na palubovku tradičně silného soupeře TJ Sokol Roztoky u
+                Prahy. </p>
+              <p *ngIf="news[14]">
+                Již od úvodu prvního zápasu bylo zřejmé, že obě utkání nabídnou velmi kvalitní volejbal. Oba soupeři
+                předváděli hru s velkým nasazením všech hráčů, což ocenili také diváci, kteří tentokrát dorazili v
+                opravdu hojném počtu. Po celou dobu prvního utkání byly oba týmy velmi vyrovnané a zápas tak dospěl až
+                do závěrečné zkrácené hry. V pátém setu benešovský tým předvedl koncentrovaný výkon a získal tak cenné
+                body do celkového hodnocení soutěže.
+
+                Druhý zápas byl poznamenán hned v úvodním setu zraněním jednoho z hráčů benešovského týmu. Přestože do
+                té doby měl hostující tým mírnou převahu, nepodařilo se tento set dotáhnout do vítězného konce. Všechny
+                sety druhého zápasu byly velmi vyrovnané a rozhodovaly až těsné koncovky. Bohužel se štěstěna tentokrát
+                přiklonila na stranu domácích a ve druhém utkání tak vyšel hostující tým bodově naprázdno se ziskem
+                pouze jednoho setu. Oba zápasy nicméně ukázali, že benešovský tým je na sezonu velmi dobře připraven a
+                předvedená hra je dobrým příslibem do dalších utkání se špičkou tabulky, které tým sehraje v listopadu.
+
+                Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti VK Tuchlovice A v sobotu 11.11.2017
+                netradičně až od 17:00 a 19:00 hod. ve sportovní hala ZŠ Jiráskova.
+
+                4. kolo, TJ Sokol Roztoky - TJ Sokol Benešov, 2:3 (-22, 16, 23, -21, -11) , 3:1 (20, -23, 26, 21)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, J. Kyselka, P. Řehák, V.
+                Votruba, M. Janák, M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(14)" *ngIf="!news[14]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>21.10.2017</small>
+                <strong>Benešovští volejbalisté opět s plným bodovým ziskem</strong>
+              </div>
+              <p>V sobotu 21.10. pokračoval třetím kolem krajský přebor ve volejbale mužů. TJ Sokol Benešov sehrál další
+                dvojutkání na domácí palubovce s týmem TJ Slavoj Český Brod. </p>
+              <p *ngIf="news[13]">
+                Oba zápasy byly v režii domácího týmu a i přes drobná zaváhání zejména v obraně nedostal hostující tým
+                mnoho příležitostí průběh hry výrazněji zdramatizovat. Obě utkání opět umožnila zapojit do hry všechny
+                hráče, což je velmi důležité hlavně jako příprava pro další utkání. Dobrou zprávou je také návrat
+                některých zraněných hráčů do plného herního zatížení.
+
+                Po třech odehraných kolech soutěže benešovští volejbalisté vedou průběžnou tabulku soutěže s plným
+                bodovým ziskem a zatím také bez ztráty setu. Nicméně teprve další a náročnější zápasy s týmy na předních
+                příčkách tabulky skutečně prověří připravenost a kvalitu týmu z Benešova.
+
+                Příští dvojzápas sehraje tým z Benešova na palubovce v Roztokách u Prahy v sobotu 4.11.2017 od 11:00 a
+                15:00 hod.
+
+                3. kolo, TJ Sokol Benešov - TJ Slavoj Český Brod, 3:0 (-20, -16, -19) , 3:0 (-10, -18, -20)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Janák, M. Lang
+
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(13)" *ngIf="!news[13]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>14.10.2017</small>
+                <strong>Tradiční derby s Vlašimí ovládli bez ztráty setu benešovští volejbalisté</strong>
+              </div>
+              <p>V sobotu 14.10. pokračovala druhým kolem nová sezóna krajského přeboru ve volejbale mužů.</p>
+              <p *ngIf="news[12]">
+                TJ Sokol Benešov zajížděl na další dvojutkání na palubovku tradičního rivala TJ Sokol Vlašim.
+
+                Již od úvodu prvního zápasu byla poznat atmosféra derby a na obou stranách hřiště se i přes velké herní
+                nasazení všech hráčů objevovali četné nepřesnosti hlavně v obraně. Benešovským volejbalistům se také ne
+                zcela podařilo zachytit nástup domácích v úvodu jednotlivých setů, kdy se nemohli plně spolehnout na
+                žádnou herní činnost. Nicméně soustředěným výkonem a zlepšením vlastní hry vždy dokázali jednotlivé sety
+                vyrovnat a nakonec dotáhnout do vítězné koncovky.
+
+                Druhý zápas byl s výjimkou třetího setu také v režii benešovských volejbalistů. V úvodu posledního setu
+                se domácí výrazněji ujali vedení a vytvořili si slibný náskok. Nicméně také tento set nakonec získal
+                benešovský celek ve svůj prospěch.
+
+                Oba zápasy také jasně potvrdili, že výrazný výkonnostní rozdíl mezi tradičními soupeři pokračuje i
+                v nové sezóně.
+
+                Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti TJ Slavoj Český Brod v sobotu
+                21.10.2017 od 11:00 a 15:00 hod.
+
+                2. kolo, TJ Sokol Vlašim - TJ Sokol Benešov, 0:3 (-18, -18, -13) , 0:3 (-15, -25, -22)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Janák, M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(12)" *ngIf="!news[12]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>7.10.2017</small>
+                <strong>Benešovští volejbalisté porazili Zruč a novou sezónu zahájili vítězně</strong>
+              </div>
+              <p>V sobotu 7.10. začala nová sezóna krajského přeboru ve volejbale mužů.
+
+                TJ Sokol Benešov sehrál úvodní dvojutkání na domácí palubovce s týmem TJ Jiskra Zruč nad Sázavou.</p>
+              <p *ngIf="news[11]">
+                Do nové sezóny tým Benešova nastupuje po intenzivní letní přípravě a také s mírně pozměněným systémem
+                hry. Zejména pro zkvalitnění přihrávky a zlepšení obrany v poli byla stabilně zapracována pozice libera,
+                kde se nově představil M. Janák. Bohužel pro první zápasy také benešovský tým nemůže počítat s některými
+                zraněnými hráči.
+
+                V prvním utkání byla na hře domácího celku znát určitá syrovost a nervozita daná úvodem sezony, což
+                vyústilo ve zbytečné nevynucené chyby a nepřesnosti zejména v obranné činnosti. Všechny tři sety se tak
+                dostali až do vyrovnané koncovky, kde ale již benešovský tým nepřipustil žádné další zaváhání.
+
+                Druhý zápas byl jednoznačnou záležitostí benešovských volejbalistů, kteří svoji hru výrazně zpřesnili a
+                zvýšili nasazení při obraně na bloku a v poli.
+
+                V obou utkáních benešovský tým využil nejen hráče základní sestavy, ale také hráče ze střídačky, kteří
+                významnou měrou přispěli k vítězství.
+
+                Příští dvojzápas sehraje tým z Benešova v tradičním derby na palubovce Vlašimi v sobotu 14.10.2017 od
+                10:00 a 14:00 hod.
+
+                1. kolo, TJ Sokol Benešov - TJ Jiskra Zruč nad Sázavou, 3:0 (-23, -21, -23) , 3:0 (-12, -15, -19)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Janák, M. Lang
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(11)" *ngIf="!news[11]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <a href="javascript:void(0)" (click)="toggleSeason(seasonsEnum.SEASON2016_2017)">Sezóna 2016 / 2017</a>
+      </div>
+      <div *ngIf="season2016_2017">
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>25.03.2017</small>
+                <strong>Benešovští volejbalisté porazili Dobřichovice a sezónu končí na druhém místě</strong>
+              </div>
+              <p>V neděli 25.3 pokračovala druhá polovina sezony krajského přeboru ve volejbale mužů.
+
+                TJ Sokol Benešov sehrál poslední dvojutkání v této sezóně, tentokrát na palubovce čtvrtého týmu
+                v průběžném hodnocení soutěže TJ Sokol Dobřichovice B.</p>
+              <p *ngIf="news[10]">
+                Oba zápasy byly jednoznačnou záležitostí benešovských volejbalistů, a to i přes drobná zaváhání ve
+                třetích
+                setech obou zápasů. V obou utkáních benešovský tým využil nejen hráče základní sestavy, ale také hráče
+                ze
+                střídačky, kteří významnou měrou přispěli k vítězství.
+
+                V konečném hodnocení soutěže skončil tým z Benešova na druhém místě.
+
+                18. kolo, TJ Sokol Dobřichovice B - TJ Sokol Benešov, 1:3 (-20, -17, 18, -18) , 1:3 (-20, -13, 23, -20)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, J. Kyselka, P.
+                Řehák, V. Votruba, M. Čepl, M. Kunc
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(10)" *ngIf="!news[10]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>19.03.2017</small>
+                <strong>Benešovští volejbalisté porazili Roztoky a pojistili si druhé místo</strong>
+              </div>
+              <p>V neděli 19.3 pokračovala druhá polovina sezony krajského přeboru ve volejbale mužů. TJ Sokol Benešov
+                sehrál další dvojutkání, tentokrát na domácí palubovce se třetím týmem v průběžném hodnocení soutěže TJ
+                Sokol Roztoky u Prahy.</p>
+              <p *ngIf="news[9]">
+                Oba zápasy byly plné atraktivních a dlouhých výměn, nicméně volejbalisté z Benešova podali přesvědčivý
+                výkon, měli utkání pod kontrolou a zaslouženě zvítězili.
+
+                Aktuálně je tým z Benešova na druhém místě v celkovém hodnocení soutěže.
+
+                Poslední utkání v této sezóně sehraje TJ Sokol Benešov v sobotu 25.3.2017 od 10.00 hod na palubovce TJ
+                Sokol Dobřichovice B.
+
+                17. kolo, TJ Sokol Benešov – TJ Sokol Roztoky u Prahy, 3:1 (17, -22, 15, 18) , 3:0 (19, 22, 18)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J. Kyselka, P. Řehák,
+                V.
+                Votruba, M. Čepl, M. Kunc
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(9)" *ngIf="!news[9]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>11.03.2017</small>
+                <strong>Benešovští volejbalisté přivezli z Rakovníka plný počet bodů</strong>
+              </div>
+              <p>V sobotu 11.3 pokračovala druhá polovina sezony krajského přeboru ve volejbale mužů. TJ Sokol Benešov
+                sehrál další dvojutkání, tentokrát zajížděl na palubovku předposledního týmu v průběžném hodnocení
+                soutěže
+                VK Rakovník A.</p>
+              <p *ngIf="news[8]">
+                Oba zápasy byly zcela v režii volejbalistů z Benešova. Hostující tým se prezentoval koncertovanou a
+                pestrou hrou, na kterou soupeř nebyl schopen v průběhu obou utkání reagovat.
+
+                Do hry se v průběhu obou zápasů zapojili všichni benešovští hráči a potvrdili tak dobrou výkonnost
+                širšího
+                hráčského kádru. Aktuálně je tým z Benešova na druhém místě v celkovém hodnocení soutěže.
+
+                Poslední domácí utkání v této sezóně sehraje TJ Sokol Benešov v neděli 19.3.2017 od 11.00 hod ve
+                sportovní
+                hale ZŠ Jiráskova v Benešově proti TJ Sokol Roztoky u Prahy.
+
+                16. kolo, VK Rakovník A - TJ Sokol Benešov, 0:3 (-14, -10,-15) , 0:3 (-17, -12,-15)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J. Kyselka, P. Řehák,
+                V.
+                Votruba, M. Čepl, M. Kunc
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(8)" *ngIf="!news[8]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>25.02.2017</small>
+                <strong>Volejbalové derby ovládl Benešov</strong>
+              </div>
+              <p>Benešov – V 15. kole krajského přeboru ve volejbale mužů se odehrálo okresní derby, ve kterém, v obou
+                případech, jasně zvítězili benešovští borci nad Vlašimí. Domácí si udrželi druhé místo v tabulce, hosté
+                jsou sedmí.</p>
+              <p *ngIf="news[7]">
+                TJ Sokol Benešov – TJ Sokol Vlašim 3:0 (14, 19, 18), 3:1 (15, -21, 5, 12).
+
+                Domácí se prezentovali přesnou hrou a rovnoměrnou distribucí nahrávek v útoku. V průběhu druhého utkání
+                se
+                také na postu nahrávače poprvé v sezoně představil Marek Čepl.
+
+                Výrazný rozdíl ve výkonnosti celků odráželo aktuální postavení v tabulce, kde Vlašim ztrácí na Benešov
+                třicet bodů.
+
+                Benešov: Jo. Bartůšek, Kočí, Hlavnička, Boháč, Lang, Kyselka, Řehák, Votruba, Čepl, Kunc.
+
+                Vlašim: Ištvánek, Jurásek, Kačena, Kalina, Klusák, Mach, J. Navrátil, M. Navrátil, Šobra, Šťastný,
+                Vaněk,
+                Zeman.
+
+                Další domácí utkání sehraje Benešov 19. 3. od 11 hod v hale ZŠ Jiráskova proti Roztokám u Prahy. Vlašim
+                hraje doma 11.3. se Zručí nad Sázavou.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(7)" *ngIf="!news[7]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>18.02.2017</small>
+                <strong>Benešovští volejbalisté přivezli plný bodový zisk z Českého Brodu</strong>
+              </div>
+              <p>V sobotu 18.2 pokračovala druhá polovina sezony krajského přeboru ve volejbale mužů. TJ Sokol Benešov
+                sehrál další dvojutkání, tentokrát zajížděl na palubovku pátého týmu v průběžném hodnocení soutěže TJ
+                Slavoj Český Brod.</p>
+              <p *ngIf="news[6]">
+                Obě utkání měla jednoznačný průběh a i přes místy houževnatý odpor soupeře, nepřipustili benešovští
+                volejbalisté žádné překvapení a měli oba zápasy plně pod kontrolou. Vítězství je o to cennější, protože
+                benešovský tým aktuálně trápí marodka a tak poprvé v sezóně využil plnou šíři hráčského kádru.
+
+                Aktuálně je tým z Benešova na druhém místě v celkovém hodnocení soutěže.
+
+                Další domácí utkání sehraje TJ Sokol Benešov 25.2.2017 od 13.00 hod ve sportovní hale ZŠ Jiráskova
+                v Benešově v tradičním derby proti TJ Sokol Vlašim.
+
+                14. kolo, TJ Slavoj Český Brod - TJ Sokol Benešov, 1:3 (21,-22,-18,-19), 0:3 (-13, -24, -18)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, Ja. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, P.
+                Řehák,
+                V. Votruba, M. Čepl, M. Kunc
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(6)" *ngIf="!news[6]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>11.02.2017</small>
+                <strong>Benešovští volejbalisté si rozdělili body s lídrem soutěže </strong>
+              </div>
+              <p>V sobotu 11.2 pokračovala druhá polovina sezony krajského přeboru ve volejbale mužů. TJ Sokol Benešov
+                sehrál další dvojutkání, tentokrát na domácí palubovce s prvním týmem v průběžném hodnocení soutěže VK
+                Tuchlovice A.</p>
+              <p *ngIf="news[5]">
+                V prvním utkání v prvních dvou setech domácí nedokázali účinně vzdorovat soupeři, nicméně od třetího
+                setu
+                zpřesnili hru a přidali na tempu a pestrosti hry. O vítězi utkání pak rozhodovala zkrácená hra, kde oba
+                týmy bojovali o každý míč a vítězství si celkem zaslouženě připsal domácí tým. Bohužel ve druhém utkání
+                se
+                domácím nepodařilo navázat na kvalitní výkon z prvního zápasu a tentokrát bral body hostující celek.
+
+                Aktuálně je tým z Benešova na třetím místě v celkovém hodnocení soutěže, nicméně má odehráno o dva
+                zápasy
+                méně než soupeři v tabulce před ním.
+
+                Další domácí utkání sehraje TJ Sokol Benešov 25.2.2017 od 13.00 hod ve sportovní hale ZŠ Jiráskova
+                v Benešově v tradičním derby proti TJ Sokol Vlašim.
+
+                13. kolo, TJ Sokol Benešov – VK Tuchlovice A, 3:2 (-19, -11, 20, 13) , 0:3 (-17, -21, -20)
+
+                Sestava TJ Sokol Benešov: Jo. Bartůšek, Ja. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J.
+                Kyselka, P. Řehák, V. Votruba, M. Čepl, M. Kunc
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(5)" *ngIf="!news[5]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>28.01.2017</small>
+                <strong>Benešovští volejbalisté vybrali Zruč</strong>
+              </div>
+              <p>Zruč nad Sázavou – Ve 12. kole krajského volejbalového přeboru mužů si druhý Benešov zajistil plný
+                počet
+                bodů ve dvojutkání na palubovce šesté Zruče nad Sázavou.</p>
+              <p *ngIf="news[4]">
+                Jiskra Zruč nad Sázavou – TJ Sokol Benešov
+                1:3 (25, -20, -11, -23), 0:3 (-20, -19, -18)
+
+                Utkání byla jednoznačnou záležitostí Benešova, a to i přes vlažnější výkon v prvním setu prvního zápasu.
+                Ve druhém duelu hosté předváděli pohledný volejbal s přesnou hrou v obraně i v útoku a zaslouženě
+                zvítězili.
+
+                Benešov: Jo. Bartůšek, Ja. Bartůšek, Kočí, Hlavnička, Boháč, Lang, Kyselka, Řehák, Votruba, Čepl.
+
+                V sobotu 11. února hraje Benešov od 11 a 13 hodin dvojzápasy v hale ZŠ Jiráskova v Benešově proti
+                lídrovi
+                tabulky VK Tuchlovice A.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(4)" *ngIf="!news[4]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>14.01.2017</small>
+                <strong>Volejbalisté Benešova potvrdili roli favorita</strong>
+              </div>
+              <p>Volejbalisté Benešova potvrdili v krajském přeboru roli favorita, když získali v domácím prostředí plný
+                počet bodů ve dvojzápase s posledním Kolínem, kterým začala druhá polovina sezony. Borci od Konopiště
+                zůstávají po výhrách na druhém místě.</p>
+              <p *ngIf="news[3]">
+                TJ SOKOL BENEŠOV – SK VOLEJBAL KOLÍN 3:1 (15, 17, -25, 16), 3:0 (9, 13, 18)
+
+                Obě utkání byla jednoznačnou záležitostí domácího týmu, a to i přes zaváhání ve třetím setu prvního
+                zápasu. Po vánoční přestávce se na začátku utkání domácí prezentovali četnými nepřesnostmi a nepříliš
+                vyrovnaným výkonem, který se ale s postupem času zlepšoval.
+
+                TJ Sokol Benešov: Jo. Bartůšek, J. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J. Kyselka, P.
+                Řehák, V. Votruba.
+
+                Další domácí utkání, šlágr kola, sehraje TJ Sokol Benešov až 11. února od 11 hodin ve sportovní hale ZŠ
+                Jiráskova proti vedoucímu týmu tabulky VK Tuchlovice A.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(3)" *ngIf="!news[3]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>10.12.2016</small>
+                <!--<img src="/assets/img/volejbal-benesov-foto-1_denik-630.jpg" class="centered" alt="client 1">-->
+                <strong>Volejbalisté Benešova brali s Dobřichovicemi tři body</strong>
+              </div>
+              <!--<div class="arrow"></div>-->
+              <p>Benešov – Volejbalisté Benešova se ve dvojutkání devátého kola krajského přeboru s Dobřichovicemi
+                dočkali
+                doma tří bodů za výhru ve druhém zápase a v tabulce poskočili na druhé místo.Benešov – Dobřichovice 0:3
+                (17, 21, 27), 3:1 (23, -24, 17, 17)
+
+              </p>
+              <p *ngIf="news[2]">V prvním utkání podali domácí nevýrazný výkon, a i přes těsný výsledek ve třetím setu,
+                nakonec hladce prohráli. Ve druhém zápase se benešovští volejbalisté zlepšili a povolili hostům zisk
+                pouze
+                jednoho setu.
+
+                Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J. Kyselka, P. Řehák, V. Votruba, M.
+                Čepl.
+
+                Další domácí utkání sehraje TJ Sokol Benešov až 14. ledna 2017 od 11 hodin ve sportovní hale ZŠ
+                Jiráskova
+                proti SK Volejbal Kolín A.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(2)" *ngIf="!news[2]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>3.12.2016</small>
+                <!--<img src="/assets/img/volejbal-benesov-foto-1_denik-630.jpg" class="centered" alt="client 1">-->
+                <strong>Volejbalisté Benešova postrádali více štěstí</strong>
+              </div>
+              <!--<div class="arrow"></div>-->
+              <p>Roztoky u Prahy – Po hladkém vítězství s Rakovníkem získali benešovští volejbalisté v 8. kole pouze bod
+                s
+                Roztoky v krajském přeboru, když i přes dobrý výkon, podlehli soupeři 1:3, 2:3. Roztoky – Benešov 3:1
+                (-18, 18, 18, 24), 3:2 (-13, 14, 25, -17, 12)
+
+              </p>
+              <p *ngIf="news[1]">Po jednoznačném průběhu prvního setu v prvním zápase pro hosty, byly další dva sety
+                záležitostí domácích. Ve čtvrtém dějství se v dramatické koncovce přiklonilo štěstí na stranu Roztok.
+
+                Druhý zápas byl mnohem vyrovnanější a ve zkrácené páté sadě byli opět šťastnější domácí.
+
+                Benešov: Jo. Bartůšek, Kočí, Hlavnička, Boháč, Lang, Řehák, Votruba, J. Bartůšek.
+
+                Aktuálně třetí Benešov hraje další utkání v sobotu 10. prosince od 11 hodin ve sportovní hale ZŠ
+                Jiráskova
+                v Benešově proti Dobřichovicím.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(1)" *ngIf="!news[1]">celá zpráva...</a></p>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="testimonial">
+              <div class="whopic">
+                <small>22.11.2016</small>
+                <strong>Benešov si smlsnul na Rakovníku</strong>
+              </div>
+              <p>Benešov – Po vítězství v okresním derby ve Vlašimi si volejbalisté Sokola Benešov připsali v domácím
+                dvojutkání 7. kola krajského přeboru i s Rakovníkem plný bodový zisk, aniž by ztratili set.</p>
+              <p *ngIf="news[0]">
+                TJ Sokol Benešov – VK Rakovník 3:0 (22, 16, 13), 3:0 (16, 19, 11)
+
+                Úvodní set prvního zápasu měl vyrovnanější průběh. Postupem času se zápas stal jednoznačnou záležitostí
+                domácího týmu, když soupeř v žádném ze setů nedosáhl více jak 20 bodů.
+
+                TJ Sokol Benešov: Josef Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, M. Lang, J. Kyselka, P. Řehák, V.
+                Votruba, M. Čepl.
+
+                Benešov je na druhém místě Krajského přeboru, a proto před polovinou soutěže může stále směle pomýšlet
+                na
+                postup do druhé národní ligy.
+
+                Další domácí utkání sehraje TJ Sokol Benešov v sobotu 10. prosince od 11 hodin ve sportovní hale ZŠ
+                Jiráskova v Benešově proti TJ Sokol Dobřichovice.
+              </p>
+              <p><a href="javascript:void(0);" (click)="showNewsAllItem(0)" *ngIf="!news[0]">celá zpráva...</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section secondary-section">
+  <div class="triangle"></div>
+  <div class="container centered">
+    <p class="large-text">Věřím ve štěstí. Čím víc se snažím, tím víc ho mám.</p>
+    <small>Stephen Leacock</small>
+    <a href="#" class="button">Na úvod</a>
+  </div>
+</div>
+
+<div id="contact">
+  <div class="section primary-section">
+    <div class="triangle"></div>
+    <div class="container">
+      <div class="title">
+        <h1>Kontakt</h1>
+      </div>
+      <div class="span9 center contact">
+        <p class="title2">TJ Sokol Benešov u Prahy</p>
+        <p>Sportovní hala ZŠ Jiráskova</p>
+        <p>Jiráskova 888, Benešov 25601</p>
+        <p class="info-mail"><a href="mailto:bene.volej@seznam.cz">bene.volej@seznam.cz</a></p>
+        <p>+420 775 358 293</p>
+        <a target="_blank" href="https://www.facebook.com/volejbalbenesov">
+          <span class="icon-facebook-circled"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="partners" class="contact">
+  <div class="section secondary-section">
+    <div class="container">
+      <div class="title">
+        <h1>Partneři</h1>
+      </div>
+      <div class="centered partners-container">
+        <a href="http://www.fitboss.cz"><img src="/assets/img/partners/fitboss2.png" alt="Fit Boss cz s.r.o."
+                                             title="Fit Boss cz s.r.o."></a>
+        &nbsp;
+        |
+        &nbsp;
+        <a href="http://www.equabank.cz"><img src="/assets/img/partners/equabank3.png" alt="Equa bank"
+                                              title="Equa bank"></a>
+        &nbsp;
+        |
+        &nbsp;
+        Město Benešov
+        <a href="http://www.benesov-city.cz/"><img src="/assets/img/partners/logo_benesov_city.png" alt="Město Benešov"
+                                                   title="Město Benešov"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="section secondary-section">
+    <div class="container centered">
+      <a class="button" href="#">Na úvod</a>
+    </div>
+  </div>
+</div>
