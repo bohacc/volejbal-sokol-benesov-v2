@@ -1,5 +1,7 @@
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { isPlatformServer } from '@angular/common';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import * as jquery from '../../tools/jquery.js';
+import * as bootstrap from '../../tools/bootstrap.js';
 
 enum SeasonsEnum {
   SEASON2016_2017 = 20162017,
@@ -7,6 +9,7 @@ enum SeasonsEnum {
 }
 
 declare var $: any;
+declare var window: any;
 
 @Component({
   selector: 'app-root',
@@ -22,19 +25,20 @@ export class AppComponent implements OnInit {
   season2016_2017 = false;
   season2017_2018 = false;
   seasonsEnum = SeasonsEnum;
+  images = ['/assets/img/dobris.jpg', '/assets/img/header11x.png', '/assets/img/header22x.png'];
 
   constructor (
     private _elRef: ElementRef,
-    @Inject(PLATFORM_ID) platformId
+    @Inject(PLATFORM_ID) platformId,
   ) {
     this.isServer = isPlatformServer(platformId);
-    this.isBrowser = !this.isServer;
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit() {
     if (this.isBrowser) {
-      $(require('../../tools/jquery.js'));
-      $(require('../../tools/bootstrap.js'));
+      // $(jquery);
+      // $(bootstrap);
     }
   }
 

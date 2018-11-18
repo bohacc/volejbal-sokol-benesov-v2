@@ -3,7 +3,7 @@
     <div class="container">
       <a href="#" class="brand logo">
         <!-- This is website logo -->
-        <img src="/assets/img/znak.png" width="37" height="43" alt="TJ Sokol Benešov" />
+        <img src="/assets/img/znak.png" width="37" height="43" alt="TJ Sokol Benešov"/>
       </a>
       <h2 class="logo">TJ Sokol Benešov u Prahy</h2>
       <!-- Navigation button, visible on small resolution -->
@@ -31,14 +31,49 @@
 <!-- Start home section -->
 <div id="home">
 
-  <!--for server side-->
-  <div class="da-slider slider-height" *ngIf="isServer">
+  <div style="height: 400px" class="da-slider">
     <div class="triangle"></div>
-    <!-- mask elemet use for masking background image -->
     <div class="mask"></div>
-    <!-- All slides centred in container element -->
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <h2>Aktualita</h2>
+        <h4>20.10.2018</h4>
+        <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů</p>
+        <a href="#news" class="da-link button">Podrobnosti</a>
+        <div class="da-img">
+          <img src="/assets/img/dobris.jpg" width="520" alt="Aktualita">
+        </div>
+        <!--<img [src]="images[0]" alt="Random first slide">
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>-->
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[1]" alt="Random second slide">
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="images[2]" alt="Random third slide">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <!--for server side-->
+  <!--<div class="da-slider slider-height" *ngIf="isServer">
+    <div class="triangle"></div>
+    &lt;!&ndash; mask elemet use for masking background image &ndash;&gt;
+    <div class="mask"></div>
+    &lt;!&ndash; All slides centred in container element &ndash;&gt;
     <div class="container">
-      <!-- Start first slide -->
+      &lt;!&ndash; Start first slide &ndash;&gt;
       <div class="da-slide da-slide-current">
         <h2 class="fittext2">Aktualita</h2>
         <h4>20.10.2018</h4>
@@ -54,59 +89,31 @@
         <span class="da-arrows-next"></span>
       </div>
     </div>
-  </div>
+  </div>-->
 
   <!-- Start cSlider -->
-  <div id="da-slider" class="da-slider slider-height" cslider [ngClass]="{hide: isServer}">
-    <div class="triangle"></div>
-    <!-- mask elemet use for masking background image -->
-    <div class="mask"></div>
-    <!-- All slides centred in container element -->
-    <div class="container">
-      <!-- Start first slide -->
-      <div class="da-slide">
-        <h2>Aktualita</h2>
-        <h4>20.10.2018</h4>
-        <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů</p>
-        <a href="#news" class="da-link button">Podrobnosti</a>
-        <div class="da-img">
-          <img src="/assets/img/dobris.jpg" width="520" alt="Aktualita">
-        </div>
+  <!--<ngb-carousel>
+    &lt;!&ndash;<div class="triangle"></div>
+    <div class="mask"></div>&ndash;&gt;
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-      <!-- End first slide -->
-      <!-- Start second slide -->
-      <div class="da-slide">
-        <h2 class="fittext2">Aktuálně hrajeme</h2>
-        <h4>KP I. TŘÍDY MUŽŮ</h4>
-        <p>V sezóně 2018/2019 hrajeme soutěž ST-M1. Naším cílem v této sezóně je podat stabilnější výsledky než v minulé a vyhrát soutěž.</p>
-        <a href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1" class="da-link button">Podrobnosti</a>
-        <div class="da-img">
-          <img src="/assets/img/header11x.png" alt="Soutěž" width="320">
-        </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+      <img [src]="images[1]" alt="Random second slide">
+      <div class="carousel-caption">
+        <h3>Second slide label</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-      <!-- End second slide -->
-      <!-- Start third slide -->
-      <div class="da-slide">
-        <h2>Naši hráči</h2>
-        <h4>Přidej se k nám</h4>
-        <p>Jsme ambiciózní tým lidí, které volejbal skutečně baví a chtějí podávat ty nejlepší výkony, ale také dobrá parta, která ráda zajde na pivo. Pokud máš chuť se k nám přidat tak neváhej a přijď se podívat na trénink</p>
-        <a href="#players" class="da-link button">Podrobnosti</a>
-        <div class="da-img">
-          <img src="/assets/img/header22x.png" width="520" alt="hráči">
-        </div>
-      </div>
-      <!-- Start third slide -->
-      <!-- Start cSlide navigation arrows -->
-      <div class="da-arrows">
-        <span class="da-arrows-prev"></span>
-        <span class="da-arrows-next"></span>
-      </div>
-      <!-- End cSlide navigation arrows -->
-    </div>
-  </div>
+    </ng-template>
+  </ngb-carousel>-->
+
 </div>
 <!-- End home section -->
-
 
 
 <!-- Service section start -->
@@ -479,15 +486,27 @@
               <small>20.10.2018</small>
               <strong>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů.</strong>
             </div>
-            <p>V sobotu 20.10.2018 sehrál TJ Sokol Benešov další dvojutkání  v rámci krajského přeboru ve volejbale mužů.</p>
+            <p>V sobotu 20.10.2018 sehrál TJ Sokol Benešov další dvojutkání v rámci krajského přeboru ve volejbale
+              mužů.</p>
             <p *ngIf="news[29]">
-              Tentokrát benešovský tým zavítal na palubovku Dobřichovic, a to ve značně pozměněné sestavě oproti předchozím utkáním.
-              Na začátku prvního zápasu byla tato změna patrná v souhře celého týmu. Hosté se dopouštěli řady nepřesností, které však kompenzovali bojovným výkonem. Díky vysokému hernímu nasazení  a větší chuti po vítězství, benešovští volejbalisté v koncovce každého setu soupeře přehráli a zaslouženě tak zvítězili ve všech třech setech.
-              Do druhého utkání nastoupili volejbalisté Dobřichovic se změnou na většině postů a výrazně zlepšili svůj herní projev. Hráči Benešova na oplátku přidali k bojovnému nasazení i značně zlepšenou souhru, a tak bylo utkání velmi vyrovnané. První set vyhráli hosté nejtěsnějším rozdílem. V druhém setu díky týmovému výkonu a obrovskému nasazení, dokázali benešovští volejbalisté v rozhodující chvíli vymazat devítibodovou ztrátu a dotáhnout sadu do vítězného konce. Ve třetím setu Dobřichovičtí vyhráli a zápas tak na chvilku zdramatizovali. Čtvrtý set opět ovládli hráči Benešova a připsali si tak šesté vítězství v této sezóně.
+              Tentokrát benešovský tým zavítal na palubovku Dobřichovic, a to ve značně pozměněné sestavě oproti
+              předchozím utkáním.
+              Na začátku prvního zápasu byla tato změna patrná v souhře celého týmu. Hosté se dopouštěli řady
+              nepřesností, které však kompenzovali bojovným výkonem. Díky vysokému hernímu nasazení a větší chuti po
+              vítězství, benešovští volejbalisté v koncovce každého setu soupeře přehráli a zaslouženě tak zvítězili ve
+              všech třech setech.
+              Do druhého utkání nastoupili volejbalisté Dobřichovic se změnou na většině postů a výrazně zlepšili svůj
+              herní projev. Hráči Benešova na oplátku přidali k bojovnému nasazení i značně zlepšenou souhru, a tak bylo
+              utkání velmi vyrovnané. První set vyhráli hosté nejtěsnějším rozdílem. V druhém setu díky týmovému výkonu
+              a obrovskému nasazení, dokázali benešovští volejbalisté v rozhodující chvíli vymazat devítibodovou ztrátu
+              a dotáhnout sadu do vítězného konce. Ve třetím setu Dobřichovičtí vyhráli a zápas tak na chvilku
+              zdramatizovali. Čtvrtý set opět ovládli hráči Benešova a připsali si tak šesté vítězství v této sezóně.
               TJ Sokol Benešov s plným bodovým ziskem vede tabulku krajského přeboru.
-              Příští dvojzápas sehrají volejbalisté na domácí palubovce proti TJ Slavoj Český Brod v sobotu 10. 11. 2018 od 11:00 a 15:00 hod.
-              3. kolo:  TJ Sokol Dobřichovice B - TJ Sokol Benešov 0:3 (-22, -22, -19) , 1:3 (-24, -24, 23, -21)
-              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, Ja. Bartůšek, J. Kyselka, Ma. Janák. M. Lang, J. Hlavnička, M. Kunc
+              Příští dvojzápas sehrají volejbalisté na domácí palubovce proti TJ Slavoj Český Brod v sobotu 10. 11. 2018
+              od 11:00 a 15:00 hod.
+              3. kolo: TJ Sokol Dobřichovice B - TJ Sokol Benešov 0:3 (-22, -22, -19) , 1:3 (-24, -24, 23, -21)
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, Ja. Bartůšek, J. Kyselka, Ma. Janák. M. Lang, J.
+              Hlavnička, M. Kunc
             </p>
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(29)" *ngIf="!news[29]">celá zpráva...</a></p>
           </div>
@@ -498,17 +517,23 @@
               <small>13.10.2018</small>
               <strong>Benešovští volejbalisté porazili na domácí palubovce Zruč.</strong>
             </div>
-            <p>V sobotu 13.10. pokračovala nová sezóna krajského přeboru ve volejbale mužů. TJ Sokol Benešov sehrál dvojutkání na domácí palubovce s týmem TJ Jiskra Zruč nad Sázavou.</p>
+            <p>V sobotu 13.10. pokračovala nová sezóna krajského přeboru ve volejbale mužů. TJ Sokol Benešov sehrál
+              dvojutkání na domácí palubovce s týmem TJ Jiskra Zruč nad Sázavou.</p>
             <p *ngIf="news[28]">
-              První utkání zahájili domácí velmi špatným výkonem a první set si zaslouženě připsali hosté. Již na konci prvního setu došlo v domácím týmu ke střídání a od druhého setu hráči Benešova zlepšili všechny herní činnosti. Další tři sety prvního utkání již byly v režii benešovských volejbalistů a v zápase zvítězili.
+              První utkání zahájili domácí velmi špatným výkonem a první set si zaslouženě připsali hosté. Již na konci
+              prvního setu došlo v domácím týmu ke střídání a od druhého setu hráči Benešova zlepšili všechny herní
+              činnosti. Další tři sety prvního utkání již byly v režii benešovských volejbalistů a v zápase zvítězili.
 
-              Ve druhém utkání domácí opět ztratili jeden set a tento zápas byl také více vyrovnaný včetně dramatické zápletky na konci čtvrtého setu. Hráči hostí předváděli v celém zápase velmi vysoké herní nasazení, zejména v obraně v poli. Nicméně domácí byli i tentokrát šťastnějším týmem a připsali si další vítězství.
+              Ve druhém utkání domácí opět ztratili jeden set a tento zápas byl také více vyrovnaný včetně dramatické
+              zápletky na konci čtvrtého setu. Hráči hostí předváděli v celém zápase velmi vysoké herní nasazení,
+              zejména v obraně v poli. Nicméně domácí byli i tentokrát šťastnějším týmem a připsali si další vítězství.
 
               Příští dvojzápas sehraje tým z Benešova na palubovce Dobřichovic v sobotu 20.10.2018 od 10:00 a 14:00 hod.
 
               2. kolo, TJ Sokol Benešov - TJ Jiskra Zruč nad Sázavou, 3:1 (-17, 23, 22, 11) , 3:1 (23, -21, 18, 24)
 
-              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, M. Boháč, Ja. Bartůšek, J. Kyselka, P. Řehák, V. Votruba,  Mi. Janák, Ma. Janák, M. Lang
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, M. Boháč, Ja. Bartůšek, J. Kyselka, P. Řehák, V. Votruba,
+              Mi. Janák, Ma. Janák, M. Lang
             </p>
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(28)" *ngIf="!news[28]">celá zpráva...</a></p>
           </div>
@@ -523,17 +548,25 @@
 
               TJ Sokol Benešov zajížděl hned na úvod na palubovku tradičního rivala TJ Sokol Vlašim. </p>
             <p *ngIf="news[27]">
-              Již od úvodu prvního zápasu byla poznat atmosféra derby a na obou stranách hřiště se objevovaly četné nepřesnosti ve všech herních činnostech. Navíc se benešovským volejbalistům nepodařilo zvládnout vyrovnanou koncovku prvního setu. V dalších třech setech už však měli hosté mírnou převahu a celý první zápas tak dotáhli do vítězného konce. Druhý zápas byl s výjimkou druhého setu také v režii benešovských volejbalistů.
+              Již od úvodu prvního zápasu byla poznat atmosféra derby a na obou stranách hřiště se objevovaly četné
+              nepřesnosti ve všech herních činnostech. Navíc se benešovským volejbalistům nepodařilo zvládnout
+              vyrovnanou koncovku prvního setu. V dalších třech setech už však měli hosté mírnou převahu a celý první
+              zápas tak dotáhli do vítězného konce. Druhý zápas byl s výjimkou druhého setu také v režii benešovských
+              volejbalistů.
 
-              I přes ztrátu dvou setů bylo zřejmé, že výrazný výkonnostní rozdíl mezi tradičními soupeři pokračuje i v další sezóně, a to i přes významnou personální obměnu týmu Vlašimi.
+              I přes ztrátu dvou setů bylo zřejmé, že výrazný výkonnostní rozdíl mezi tradičními soupeři pokračuje i v
+              další sezóně, a to i přes významnou personální obměnu týmu Vlašimi.
 
-              Také benešovský tým pro novou sezónu doplnil kádr, což umožní lépe rozložit síly pro celou sezónu a také kompenzovat případné výpadky a zranění, které výrazně poznamenali výsledky v předchozích dvou letech.
+              Také benešovský tým pro novou sezónu doplnil kádr, což umožní lépe rozložit síly pro celou sezónu a také
+              kompenzovat případné výpadky a zranění, které výrazně poznamenali výsledky v předchozích dvou letech.
 
-              Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti TJ Jiskra Zruč nad Sázavou v sobotu 13.10.2018 od 11:00 a 15:00 hod.
+              Příští dvojzápas sehraje tým z Benešova na domácí palubovce proti TJ Jiskra Zruč nad Sázavou v sobotu
+              13.10.2018 od 11:00 a 15:00 hod.
 
               1. kolo, TJ Sokol Vlašim - TJ Sokol Benešov, 1:3 (28, -12, -14, -16) , 1:3 (-19, 23, -20, -17)
 
-              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, Ja. Bartůšek, J. Kyselka, P. Řehák, V. Votruba,  Ma. Janák, M. Lang, Mi. Janák, V. Dachauer
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, Ja. Bartůšek, J. Kyselka, P. Řehák, V.
+              Votruba, Ma. Janák, M. Lang, Mi. Janák, V. Dachauer
             </p>
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(27)" *ngIf="!news[27]">celá zpráva...</a></p>
           </div>
@@ -548,7 +581,8 @@
             </div>
             <p>Tým začal tréninkem již v polovině srpna. První zápas ho čeká 6.10. s Vlašimským mužstvem.</p>
             <p *ngIf="news[26]">
-              Jako novinka pro letošní sezónu je nový nahrávač Michal Janák, který na sobě letos už hodně zapracoval a bude velkou posilou týmu.
+              Jako novinka pro letošní sezónu je nový nahrávač Michal Janák, který na sobě letos už hodně zapracoval a
+              bude velkou posilou týmu.
             </p>
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(26)" *ngIf="!news[26]">celá zpráva...</a></p>
           </div>

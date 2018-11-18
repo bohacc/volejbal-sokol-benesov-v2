@@ -11,11 +11,15 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/platform-server": "~7.0.2",
+    "@ng-bootstrap/ng-bootstrap": "^4.0.0",
     "express": "~4.16.3",
     "firebase-admin": "~5.12.1",
-    "firebase-functions": "~1.0.2",
+    "firebase-functions": "^2.1.0",
     "rxjs": "~6.3.0",
     "zone.js": "~0.8.26"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^10.12.2"
+  }
 }

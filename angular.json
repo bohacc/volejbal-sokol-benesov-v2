@@ -10,7 +10,7 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "styleext": "css"
         }
       },
       "architect": {
@@ -23,13 +23,19 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
+              "src/assets/css/animate.css",
+              "src/assets/css/bootstrap-old.css",
+              "src/assets/css/bootstrap-responsive.css",
+              "src/assets/css/pluton.css",
+              "src/assets/css/style.css",
+              "src/assets/css/jquery.cslider.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {
