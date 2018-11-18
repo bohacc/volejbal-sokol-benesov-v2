@@ -31,17 +31,21 @@
 <!-- Start home section -->
 <div id="home">
 
-  <div style="height: 400px" class="da-slider">
+  <div style="height: 500px" class="da-slider slider-height da-slider-fb">
     <div class="triangle"></div>
     <div class="mask"></div>
     <ngb-carousel *ngIf="images">
       <ng-template ngbSlide>
-        <h2>Aktualita</h2>
-        <h4>20.10.2018</h4>
-        <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů</p>
-        <a href="#news" class="da-link button">Podrobnosti</a>
-        <div class="da-img">
-          <img src="/assets/img/dobris.jpg" width="520" alt="Aktualita">
+        <div>
+          <div class="da-slide da-slide-current carousel-itm">
+            <h2>Aktualita</h2>
+            <h4>20.10.2018</h4>
+            <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů</p>
+            <a href="#news" class="da-link button">Podrobnosti</a>
+            <div class="da-img">
+              <img src="/assets/img/dobris.jpg" width="520" alt="Aktualita">
+            </div>
+          </div>
         </div>
         <!--<img [src]="images[0]" alt="Random first slide">
         <div class="carousel-caption">
@@ -50,67 +54,47 @@
         </div>-->
       </ng-template>
       <ng-template ngbSlide>
-        <img [src]="images[1]" alt="Random second slide">
+        <div>
+          <div class="da-slide da-slide-current carousel-itm">
+            <h2 class="fittext2">Aktuálně hrajeme</h2>
+            <h4>KP I. TŘÍDY MUŽŮ</h4>
+            <p>V sezóně 2018/2019 hrajeme soutěž ST-M1. Naším cílem v této sezóně je podat stabilnější výsledky než v
+              minulé a vyhrát soutěž.</p>
+            <a href="http://www.cvf.cz/souteze/soutez/?soutez=ST-M1" class="da-link button">Podrobnosti</a>
+            <div class="da-img">
+              <img src="/assets/img/header11x.png" alt="Soutěž" width="320">
+            </div>
+          </div>
+        </div>
+        <!--<img [src]="images[1]" alt="Random second slide">
         <div class="carousel-caption">
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        </div>-->
       </ng-template>
       <ng-template ngbSlide>
-        <img [src]="images[2]" alt="Random third slide">
+        <div>
+          <div class="da-slide da-slide-current carousel-itm">
+            <h2>Naši hráči</h2>
+            <h4>Přidej se k nám</h4>
+            <p>Jsme ambiciózní tým lidí, které volejbal skutečně baví a chtějí podávat ty nejlepší výkony, ale také
+              dobrá
+              parta, která ráda zajde na pivo. Pokud máš chuť se k nám přidat tak neváhej a přijď se podívat na
+              trénink</p>
+            <a href="#players" class="da-link button">Podrobnosti</a>
+            <div class="da-img">
+              <img src="/assets/img/header22x.png" width="520" alt="hráči">
+            </div>
+          </div>
+        </div>
+        <!--<img [src]="images[2]" alt="Random third slide">
         <div class="carousel-caption">
           <h3>Third slide label</h3>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
+        </div>-->
       </ng-template>
     </ngb-carousel>
   </div>
-
-  <!--for server side-->
-  <!--<div class="da-slider slider-height" *ngIf="isServer">
-    <div class="triangle"></div>
-    &lt;!&ndash; mask elemet use for masking background image &ndash;&gt;
-    <div class="mask"></div>
-    &lt;!&ndash; All slides centred in container element &ndash;&gt;
-    <div class="container">
-      &lt;!&ndash; Start first slide &ndash;&gt;
-      <div class="da-slide da-slide-current">
-        <h2 class="fittext2">Aktualita</h2>
-        <h4>20.10.2018</h4>
-        <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů.</p>
-        <a href="#news" class="da-link button">Podrobnosti</a>
-        <div class="da-img">
-          <img src="/assets/img/dobris.jpg" alt="Soutěž" width="320">
-        </div>
-      </div>
-
-      <div class="da-arrows">
-        <span class="da-arrows-prev"></span>
-        <span class="da-arrows-next"></span>
-      </div>
-    </div>
-  </div>-->
-
-  <!-- Start cSlider -->
-  <!--<ngb-carousel>
-    &lt;!&ndash;<div class="triangle"></div>
-    <div class="mask"></div>&ndash;&gt;
-    <ng-template ngbSlide>
-      <img [src]="images[1]" alt="Random second slide">
-      <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-
-    <ng-template ngbSlide>
-      <img [src]="images[1]" alt="Random second slide">
-      <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>-->
 
 </div>
 <!-- End home section -->
