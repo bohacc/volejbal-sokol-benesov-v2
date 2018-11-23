@@ -3,10 +3,12 @@ ngb-carousel {
   width: inherit;
   height: inherit;
   // height: 400px;
+  outline: none !important;
 }
 
 .carousel-inner {
   overflow: visible;
+  outline: none !important;
 }
 
 .carousel-item {
@@ -28,11 +30,13 @@ ngb-carousel {
 
 .carousel-control-prev {
   z-index: 20;
+  cursor: pointer;
 }
 
 
 .carousel-control-next {
   z-index: 20;
+  cursor: pointer;
 }
 
 .carousel-indicators{
@@ -187,4 +191,37 @@ ngb-carousel {
   justify-content: center;
   display: flex;
   width: 1000px;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 40px;
+  .col1 {
+    flex: 1;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .col2 {
+    flex: 1;
+    text-align: right;
+    justify-content: flex-end;
+  }
+  h2 {
+    color: #000000;
+  }
+  h4 {
+    color: #000000;
+  }
+  p {
+    color: #ffffff;
+  }
+}
+
+.carousel-item.active {
+  width: 100% !important;
+  justify-content: center;
+  outline: none !important;
 }

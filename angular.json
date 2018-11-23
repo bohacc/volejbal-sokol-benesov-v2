@@ -35,6 +35,8 @@
               "src/styles.scss"
             ],
             "scripts": [
+              "tools/jquery.js",
+              "tools/bootstrap.js"
             ]
           },
           "configurations": {
