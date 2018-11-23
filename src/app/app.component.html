@@ -40,9 +40,9 @@
         <div class="carousel-container">
           <div class="col1">
             <div><h2>Aktualita</h2></div>
-            <div><h4>20.10.2018</h4></div>
+            <div><h4>10.11.2018</h4></div>
             <div>
-              <p>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů</p>
+              <p>Benešovští volejbalisté porazili na domácí palubovce Český Brod a drží vedení v soutěži</p>
             </div>
             <div>
               <a href="#news" class="da-link button">Podrobnosti</a>
@@ -470,6 +470,25 @@
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
+              <small>10.11.2018</small>
+              <strong>Benešovští volejbalisté porazili na domácí palubovce Český Brod a drží vedení v soutěži.</strong>
+            </div>
+            <p>V sobotu 10.11. pokračoval pátým kolem krajský přebor ve volejbale mužů. Vedoucí celek průběžného hodnocení soutěže TJ Sokol Benešov přivítal na domácí palubovce čtvrtý tým TJ Slavoj Český Brod.</p>
+            <p *ngIf="news[30]">
+              Hosté přijeli ve srovnání s předchozími sezónou ve značně pozměněné a posílené sestavě. Hned od prvních míčů utkání bylo zřejmé, že o atraktivní výměny nebude v dalším průběhu nouze. Oba týmy hned od počátku předváděli kvalitní výkon s velkým herním nasazením a všechny sety obou zápasů proto byly až do koncovek velmi vyrovnané. Benešovští volejbalisté však všechny sety obou utkání zvládli vítězně a připsali si tak do tabulky plný počet bodů. Hosté se prezentovali kvalitním podáním a obrannou hrou v poli, domácí dominovali zejména v útoku a na bloku.
+
+              Příští dvojzápas sehraje tým z Benešova na palubovce Roztok u Prahy v sobotu 18.11.2018 od 10:00 a 15:00 hod.
+
+              5. kolo, TJ Sokol Benešov - TJ Slavoj Český Brod, 3:0 (22, 18, 23) , 3:0 (23, 15, 27)
+
+              Sestava TJ Sokol Benešov: Jo. Bartůšek, P. Kočí, M. Boháč, J. Kyselka, M. Lang, P. Řehák, Mi. Janák, Ma. Janák
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(30)" *ngIf="!news[30]">celá zpráva...</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
               <small>20.10.2018</small>
               <strong>Benešovští volejbalisté přivezli z Dobřichovic plný počet bodů.</strong>
             </div>
@@ -525,6 +544,8 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(28)" *ngIf="!news[28]">celá zpráva...</a></p>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
@@ -558,8 +579,6 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(27)" *ngIf="!news[27]">celá zpráva...</a></p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
