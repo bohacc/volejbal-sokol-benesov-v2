@@ -40,16 +40,16 @@
         <div class="carousel-container">
           <div class="col1">
             <div><h2>Aktualita</h2></div>
-            <div><h4>10.11.2018</h4></div>
+            <div><h4>1.12.2018</h4></div>
             <div>
-              <p>Benešovští volejbalisté porazili na domácí palubovce Český Brod a drží vedení v soutěži</p>
+              <p>Dne 1. 12. 2018 hráči Benešova zamířili na zápas podzimu, za nehostinného počasí, na palubovku Mělníka.</p>
             </div>
             <div>
               <a href="#news" class="da-link button">Podrobnosti</a>
             </div>
           </div>
           <div class="col2">
-            <img src="/assets/img/dobris.jpg" width="520" alt="Aktualita">
+            <img src="/assets/img/dobris.jpg" width="520" height="350" style="height: 350px;" alt="Aktualita">
           </div>
         </div>
 
@@ -470,6 +470,25 @@
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
+              <small>1.12.2018</small>
+              <strong>Dne 1. 12. 2018 hráči Benešova zamířili na zápas podzimu, za nehostinného počasí, na palubovku Mělníka.</strong>
+            </div>
+            <p>Zápas prvního týmu tabulky Benešova s druhým VK Mělník sliboval volejbalové hody a přilákal velkou diváckou kulisu, která by předčila leckterý ligový zápas.</p>
+            <p *ngIf="news[31]">
+              První set začali lépe Benešovští volejbalisté krásnou kombinací středem sítě. Po úvodním oťukávání domácí hráči našli silnou půdu pod nohama a Benešovské přetlačili zvláště nasazením a stabilním výkonem ve všech činnostech. Hráči Benešova působili lehce zmateně a chyběla jim organizovanost z minulých kol. Když se připojili drobné nepřesnosti na přijmu, nahrávce a útoku z kůlů, skončil první set 25:21 pro domácí.
+              Do druhého setu z hráčů Benešova opadly zábrany a hned na úvod si vypracovali drobné vedení. Střed setu ovládli hráči Mělníka a tak oba týmy vstupovaly do koncovky s rovným počtem bodů 20:20. Koncovka setu byla hodně o vůli, a chtění vyhrát a tak po velkém boji vyhráli set borci z Benešova. Kvalita utkání se projevovala na obou stranách a vše napovídalo, že zápas bude napínavý až do konce.
+              Po přestávce vstoupil, z pohledu Benešova na hřiště úplně jiný tým. Až na útok středem se žádné činnosti nedařilo. Soupeř převažoval zvláště útokem z handy, který nebyl nikterak razantní, ale o to více přesný. Když se na straně Benešova přidali nepřesnosti v rozehře a totální výpadek bojovnosti, končil set za stavu 25:13 pro domácí, rozdílem třídy.
+              Do čtvrtého setu se benešovští rozhodli pro radikální změnu a nasadili tajnou zbraň, druhého nahrávače. Rozjetí domácí i přes jiný styl hry nedali Benešovským žádnou šanci a dominovali na všech činnostech. Set skončil 25:16 pro mělnické.
+              Do druhého zápasu nastupovali Benešovští s chutí a bojovností. Od prvního zápasu se změnil herní projev, kdy už od začátku nastoupil místo M. Janáka nahrávač J. Hlavnička. Domácí v celém zápase dominovali a nenechali se benešovskými zatlačit pod žádný tlak. Všechny tři sety měly vyrovnaný průběh a rozhodovaly je de-facto až koncovky setů. Na straně Benešovských leckdy chybělo pověstné volejbalové štěstíčko. Domácí prakticky nechybovali a dokázali přidat ještě něco navíc oproti Benešovským. Zápas měl náboj a úžasnou diváckou kulisu. Vítězství v zápase 3:0 na sety vyšvihlo Mělnické borce do čela tabulky středočeského kraje s 3 bodovým předstihem před benešovskými.
+              Další zápas odehrají volejbalisté Benešova v domácím prostředí proti tradičnímu rivalovi z Tuchlovic. Pro vývoj v rámci dění v soutěži to budou veledůležité zápasy a tak Vás hráči prosí, abyste je přišli podpořit a zafandit do haly.
+              Benešov: Jo. Bartůšek, P. Kočí, J. Hlavnička, M. Boháč, Ja. Bartůšek, Ma. Janák, J. Kyselka, V. Votruba, M. Lang, Mi. Janák
+            </p>
+            <p><a href="javascript:void(0);" (click)="showNewsAllItem(31)" *ngIf="!news[31]">celá zpráva...</a></p>
+          </div>
+        </div>
+        <div class="span4">
+          <div class="testimonial">
+            <div class="whopic">
               <small>10.11.2018</small>
               <strong>Benešovští volejbalisté porazili na domácí palubovce Český Brod a drží vedení v soutěži.</strong>
             </div>
@@ -517,6 +536,8 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(29)" *ngIf="!news[29]">celá zpráva...</a></p>
           </div>
         </div>
+      </div>
+      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
@@ -544,8 +565,6 @@
             <p><a href="javascript:void(0);" (click)="showNewsAllItem(28)" *ngIf="!news[28]">celá zpráva...</a></p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="span4">
           <div class="testimonial">
             <div class="whopic">
