@@ -5,7 +5,8 @@ import * as bootstrap from '../../tools/bootstrap.js';
 
 enum SeasonsEnum {
   SEASON2016_2017 = 20162017,
-  SEASON2017_2018 = 20172018
+  SEASON2017_2018 = 20172018,
+  SEASON2018_2019 = 20182019,
 }
 
 declare var $: any;
@@ -24,6 +25,7 @@ export class AppComponent implements OnInit {
   news: Array<Boolean> = [false, false, false];
   season2016_2017 = false;
   season2017_2018 = false;
+  season2018_2019 = false;
   seasonsEnum = SeasonsEnum;
   images = ['/assets/img/dobris.jpg', '/assets/img/header11x.png', '/assets/img/header22x.png'];
 
@@ -53,6 +55,9 @@ export class AppComponent implements OnInit {
         break;
       case this.seasonsEnum.SEASON2017_2018:
         this.season2017_2018 = !this.season2017_2018;
+        break;
+      case this.seasonsEnum.SEASON2018_2019:
+        this.season2018_2019 = !this.season2018_2019;
         break;
     }
   }
